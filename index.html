@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UNHINGED.EXE</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁</text></svg>" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <canvas id="game" width="1280" height="720"></canvas>
+
+      <div id="banner" class="hidden"></div>
+
+      <div id="gerald" class="hidden">
+        <div id="gerald-face"><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+        <div id="gerald-body">
+          <div id="gerald-name">GERALD<span class="tag">AI · definitely fine</span></div>
+          <div id="gerald-text"></div>
+        </div>
+      </div>
+
+      <div id="modal" class="hidden">
+        <div class="window">
+          <div class="titlebar"><span id="modal-title"></span><span class="fake-x">✕</span></div>
+          <p id="modal-text"></p>
+          <div id="modal-buttons"></div>
+        </div>
+      </div>
+
+      <div id="bsod" class="hidden">
+        <div class="sad">:(</div>
+        <p>Your game ran into a problem and needs to restart. GERALD is collecting some error info, and then he will restart for you.</p>
+        <p class="pct"><span id="bsod-pct">0</span>% complete</p>
+        <p class="small">Stop code: GERALD_IS_FINE_ACTUALLY<br />What failed: your_confidence.sys</p>
+      </div>
+
+      <div id="title" class="screen">
+        <h1 class="glitch" data-text="UNHINGED.EXE">UNHINGED.EXE</h1>
+        <p class="sub">a game designed, run, and constantly sabotaged by an AI named GERALD</p>
+        <form id="name-form">
+          <label for="name-input" id="name-label">GERALD: What is your name? I will use it against you.</label>
+          <input id="name-input" maxlength="16" autocomplete="off" placeholder="type your name" />
+          <button type="submit" id="start-btn">BEGIN SUFFERING</button>
+        </form>
+        <div class="controls">
+          <span><b>WASD</b> move</span><span><b>MOUSE</b> aim</span><span><b>CLICK</b> shoot</span><span><b>SPACE</b> dash</span>
+          <span><b>P</b> pause</span><span><b>M</b> mute</span><span><b>V</b> voice</span>
+        </div>
+        <p class="stats" id="title-stats"></p>
+      </div>
+
+      <div id="over" class="screen hidden">
+        <h1 class="glitch" id="over-title" data-text="GAME OVER">GAME OVER</h1>
+        <p id="over-line" class="over-line"></p>
+        <div id="over-stats" class="over-stats"></div>
+        <button id="again-btn">AGAIN. (GERALD INSISTS)</button>
+      </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "unhinged-exe",
+  "version": "1.0.0",
+  "description": "A top-down shooter run (and constantly sabotaged) by an unhinged AI named GERALD.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js --open",
+    "test": "node --test"
+  }
+}
